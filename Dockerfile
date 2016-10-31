@@ -4,7 +4,7 @@ MAINTAINER Sumi Straessle
 RUN apk update \
 	&& apk upgrade \
 	&& apk add rsyslog
-ADD ./rsyslog2.conf /etc/rsyslog.conf
+ADD ./rsyslog.conf /etc/rsyslog.conf
 ADD ./rsyslog.sv.conf /etc/supervisor/conf.d/rsyslog.sv.conf
 
 CMD ["supervisord", "-c", "/etc/supervisor/supervisor.conf"]
